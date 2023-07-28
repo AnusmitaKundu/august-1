@@ -1,0 +1,251 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre&family=Montserrat:ital,wght@0,300;0,400;1,600&family=Poppins:wght@100;200&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+
+.image1, .image3, .image4{
+    padding: 20%;
+    border: 2px solid white;
+}
+.image1 {
+    background-image: url("src/IMG-20230214-WA0034.jpg");
+    background-size: cover;
+  background-position: center;
+  }
+
+.image2{
+    /* background-image: url("src/IMG-20230511-WA0039.jpg"); */
+    background-size: cover;
+  background-position: center;
+    animation: fade-out 20s ease-in-out forwards;
+}
+
+.image3{
+    background-image: url("src/Picsart_23-05-14_12-10-12-648.jpg");
+    background-size: cover;
+  background-position: center;
+  
+}
+
+.text1
+{
+    text-align:center;
+    font-family: 'Frank Ruhl Libre', serif;
+    color:#e8e8e8;
+    justify-content: center;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%,50%);
+    padding: 5%;
+    /* background-color: rgb(95, 95, 95); */
+    border-radius: 2px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+     position: relative; /*must add postion: relative to make the animation work */
+    animation: mymove 5s 2;
+    font-size: 5.7vw;
+    
+}
+@keyframes mymove {
+    from {top: -500px;}
+    to {top: 150px;}
+  }
+/* Starting of the 2nd image */
+    .image2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 500px;
+      }
+      
+      .division {
+        flex: 1;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+      }
+      
+      .column-2-image2 {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vw;
+        background-color: lightblue;
+        animation: slide-in 4s ease-in;
+      }
+      
+      @keyframes slide-in {
+        0% {
+          transform: translateX(-100%);
+          opacity: 0;
+        }
+        100% {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+      
+        
+      section {
+        width: 100%;
+        height: 50vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    div.loader {
+        gap: 10px;
+        width: 140px;
+        height: 200px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    div.loader span {
+        width: 15px;
+        height: 100%;
+        background-color: #fff;
+        animation: loading 1.5s infinite ease-in-out;
+    }
+    
+    div.loader span:nth-child(1) {
+        animation-delay: 0s;
+        
+    }
+    
+    div.loader span:nth-child(2) {
+        animation-delay: 0.3s;
+    }
+    
+    div.loader span:nth-child(3) {
+        animation-delay: 0.6s;
+    }
+    
+    div.loader span:nth-child(4) {
+        animation-delay: 0.9s;
+    }
+    div.loader span:nth-child(5) {
+        animation-delay: 0.9s;
+    }
+    div.loader span:nth-child(6) {
+        animation-delay: 0.6s;
+    }
+    div.loader span:nth-child(7) {
+        animation-delay: 0.3s;
+    }
+    div.loader span:nth-child(8) {
+        animation-delay: 0s;
+    }
+      
+.division2{
+    display: inline-block;
+}
+.text{
+    text-align: center;
+    position: relative;
+    width: 100%;
+    height: 56vh;
+    justify-content: center;
+    align-items: center;
+    color: transparent;
+  background: linear-gradient(to right, #0080FF, #00BFFF);
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-size: 24px;
+}
+
+@keyframes loading {
+    0%, 100% {
+        transform: scaleY(10%);
+        background-color: #0ca132;
+    }
+    30%{
+        transform: scaleY(30%);
+        background-color:#7cd951;
+    }
+    50% {
+        transform: scaleY(60%);
+        background-color: #058907;
+    }
+}     
+/* End of the 2nd container */
+ .counterdays{
+    top: 200px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align:center;
+    justify-content: center;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+     position: relative; /*must add postion: relative to make the animation work */
+    padding: 5%;
+    font-size: 5.7vw;
+    color:rgb(235, 235, 183) ;
+    border-radius: 15px;
+ }
+.counter{
+    color:aqua;
+}
+.image4{
+    /* background-image: url("src/maidan.jpeg"); */
+    background-color: rgb(120, 209, 209);
+    background-size: cover;
+    background-position: center;
+    
+}
+.option{
+    /* padding: 30%; */
+    backdrop-filter: blur(8px);
+    text-align:center;
+    justify-content: center;
+}
+.btn{
+    top: 290px;
+    padding: 5%;
+    margin: 10px;
+    backdrop-filter: blur(8px);
+    border-radius: 22px;
+    font-size: 24px;
+}
+.question{
+    font-size: 40px;
+}
+form {
+    padding: 12px;
+    width: 200px;
+}
+
+textarea {
+    resize: both; /* Enables both vertical and horizontal resizing */
+    width: 100%; /* Ensures the textarea takes the full width of the form */
+    height: 100px; /* Initial height of the textarea */
+    font-size: 30px;
+}
+input[type="submit"] {
+    align-items: center;
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Button hover effect */
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Button pressed effect */
+input[type="submit"]:active {
+    background-color: #3e8e41;
+}
+
