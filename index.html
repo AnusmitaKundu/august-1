@@ -55,7 +55,7 @@
                 
 
             </div>
-            <div class="image4">
+             <div class="image4">
                 <div class="option">
                     <div class="question">
                         Do you want to spend the rest of the years with me?
@@ -65,11 +65,30 @@
                     </div> -->
                     <form>
                         <textarea></textarea>
-                        <input type="submit" value="Send" onclick="saveText()">
+                        <button onclick="saveText()">Send</button>
+                        
                     </form>
-                    <div id="savedText"></div>
+                    <div id="displayArea"></div>
                 </div>
             </div>
+
+
+            <div class="container5">
+                <div class="to-do">
+                    <div class="todo-text">
+                       Create our Bucket List
+                    </div>
+                    
+                    <div class="row">
+                        <input type="text" id="input-box" placeholder="Add to out bucketlist...">
+                        <button onclick="addTask()">Add</button>
+                    </div>
+                    <ul id="list">
+                        
+                    </ul>
+                </div>
+            </div>
+            
 
             
 
