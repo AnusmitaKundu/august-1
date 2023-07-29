@@ -31,20 +31,40 @@ startCounter('counter', 15000, days); // Start the counter with a duration of 20
 function saveText() {
   // Get the value of the textarea
   const submittedText = document.getElementById('textArea').value;
-
-  // Save the text to local storage
-  localStorage.setItem('submittedText', submittedText);
-
-  // Display the submitted text on the page
-  const savedTextElement = document.getElementById('savedText');
-  savedTextElement.textContent = "Submitted Text: " + submittedText;
+  
+  // Display the value on the website
+  const displayArea = document.getElementById('displayArea');
+  displayArea.innerHTML = submittedText;
 }
 
-// On page load, check if there's any previously submitted text and display it
-window.onload = function () {
-  const submittedText = localStorage.getItem('submittedText');
-  if (submittedText) {
-      const savedTextElement = document.getElementById('savedText');
-      savedTextElement.textContent = "Submitted Text: " + submittedText;
+//to-do list
+
+const inputbox= document.getElementById('input-box');
+const listcontainer= document.getElementById('list');
+
+function addTask()
+{
+  if(inputbox.value==='')
+  {
+    alert("You must write something");
   }
-};
+  else{
+    let li=document.createElement("li");
+    li.innerHTML=inputbox.value;
+    listcontainer.appendChild(li);
+  
+  }
+  inputbox.value='';
+  saveData();
+}
+
+function saveData()
+{
+  localStorage.setItem("data",listcontainer.innerHTML);
+}
+
+function showTask()
+{
+  listcontainer.innerHTML=localStorage.getItem("data");
+}
+showTask();
