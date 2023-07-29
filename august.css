@@ -228,8 +228,11 @@ textarea {
     width: 100%; /* Ensures the textarea takes the full width of the form */
     height: 100px; /* Initial height of the textarea */
     font-size: 30px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
 }
-input[type="submit"] {
+form button{
     align-items: center;
     padding: 8px 16px;
     background-color: #4CAF50;
@@ -240,12 +243,87 @@ input[type="submit"] {
 }
 
 /* Button hover effect */
-input[type="submit"]:hover {
+form button:hover {
     background-color: #45a049;
 }
 
 /* Button pressed effect */
-input[type="submit"]:active {
+form button:active {
     background-color: #3e8e41;
 }
 
+.container5{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.to-do{
+    width: 100%;
+    height: 100vh;
+    max-width: 540px;
+    padding: 20px;
+
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #d9dadb;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+
+}
+
+input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 14px;
+
+}
+
+.row button{
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #f25240;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 30px;
+
+}
+
+ul li{
+    list-style: circle;
+    font-size: 40px;
+    color: #7b3db8;
+    padding: 12px 8px 12px 15px;
+    user-select: none;
+    cursor: pointer;
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    top: 12px;
+    left: 8px;
+    height: 28px;
+    width: 28px;
+
+}
+
+
+.todo-text{
+    padding: 20px;
+    font-size: 45px;
+    color:rgb(120, 209, 209);
+    text-align: center;
+}
+
+#displayArea{
+    background-color: #d9dadb;
+}
